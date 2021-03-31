@@ -4,10 +4,12 @@ import React, { useState } from 'react';
 import ButtonIdea from './components/ButtonIdea';
 import IntellijIcon from './assets/IntellijIcon';
 
+// Functions
+import { openInIdea } from './core/git-idea-util';
+
 // css
 import './styles.css';
 import './app.css';
-import { openInIdea } from './core/git-idea-util';
 
 function App() {
   const [repoUrl, setRepoUrl] = useState<string>('');

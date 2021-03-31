@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 // components
 import ButtonIdea from './components/ButtonIdea';
@@ -7,6 +7,7 @@ import IntellijIcon from './assets/IntellijIcon';
 // css
 import './styles.css';
 import './app.css';
+import { openInIdea } from './core/git-idea-util';
 
 function App() {
   const [repoUrl, setRepoUrl] = useState<string>('');
@@ -15,6 +16,8 @@ function App() {
     if (!repoUrl) {
       return alert('Repo URL must be set.');
     }
+
+    openInIdea(tool, repoUrl);
   }
 
   return (

@@ -9,7 +9,7 @@ import { openInIdea } from './core/git-idea-util';
 
 // css
 import './styles.css';
-import './app.css';
+import './app-default.css';
 
 function App() {
   const [repoUrl, setRepoUrl] = useState<string>('');
